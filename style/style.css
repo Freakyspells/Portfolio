@@ -1,0 +1,25 @@
+body {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-areas: "menuButton title" "pageContent pageContent" "footer footer"; }
+
+#menuButton {
+  grid-area: menuButton;
+  border: 5px solid red; }
+
+#pageTitle {
+  grid-area: title;
+  border: 5px solid yellow; }
+
+#pageContent {
+  grid-area: pageContent;
+  border: 5px solid green;
+  padding: 50px;
+  text-align: center; }
+
+#footer {
+  grid-area: footer;
+  text-align: center;
+  border: 5px solid blue; }
+
+/*# sourceMappingURL=style.css.map */
