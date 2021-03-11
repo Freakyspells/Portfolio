@@ -1,10 +1,17 @@
+* {
+  margin: 0;
+  text-align: center; }
+
 body {
+  background-image: url("florian-olivo.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
   display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-areas: "menuButton title" "pageContent pageContent" "footer footer"; }
+  grid-template-areas: "title" "menuButton" "pageContent" "footer"; }
 
 #menuButton {
-  grid-area: menuButton;
+  text-align: left;
   border: 5px solid red; }
 
 #pageTitle {
@@ -13,13 +20,20 @@ body {
 
 #pageContent {
   grid-area: pageContent;
-  border: 5px solid green;
-  padding: 50px;
+  border: 5px solid pink;
+  padding: 20px 40px 40px 40px;
   text-align: center; }
+
+.pageLink {
+  border: 5px outset green;
+  background: url("nathan-dumlao-wood.jpg");
+  background-size: cover;
+  margin: 10px; }
 
 #footer {
   grid-area: footer;
   text-align: center;
-  border: 5px solid blue; }
+  border: 5px solid blue;
+  font-size: 0.7rem; }
 
 /*# sourceMappingURL=style.css.map */
