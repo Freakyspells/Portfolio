@@ -13,23 +13,23 @@
     </header>
 
     <nav>
-        <h1 id="menuLine">
-            <button id="menuButton">Menu</button>
-        </h1>
-        <div id=menuContent>
+        <div id="menuLine">
+            <button onclick="menuFunction()" id="menuButton">Menu</button>
+        </div>
+        <div class="menuContent" id="menuCall">
             <a href="#">Homepage</a>
             <a href="#">Projects</a>
             <a href="#">Skills</a>
             <a href="#">AboutMe</a>
-            <a href="">Contact Info</a>
+            <a href="#">Contact Info</a>
         </div>
     </nav>
 
     <content id="pageContent">
-        <button class="pageLink"><a href="#"">Projects</a></button>
-        <button class="pageLink"><a href="#"">Skills</a></button>
-        <button class="pageLink"><a href="#"">About Me</a></button>
-        <button class="pageLink"><a href="#"">Contact Info</a></button>
+        <button class="pageLink"><a href="#">Projects       </a></button>
+        <button class="pageLink"><a href="#">Skills         </a></button>
+        <button class="pageLink"><a href="#">About Me       </a></button>
+        <button class="pageLink"><a href="#">Contact Info   </a></button>
     </content>
     
     <footer id="footer">
@@ -43,7 +43,12 @@
 
     <script>
         function menuFunction() {
-            document.getElementById("menuContent").classList.toggle("visable");
+            var x = document.getElementById("menuCall");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
         }
     </script>
 

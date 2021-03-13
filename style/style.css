@@ -20,17 +20,34 @@ body {
 #menuLine {
   position: relative;
   text-align: left;
-  left: 20px;
-  top: -5px; }
+  left: 20px; }
 
 #menuButton {
   width: 100px;
+  background-color: black;
   opacity: 50%;
-  background: none;
-  color: white; }
+  color: white;
+  border: none;
+  cursor: pointer; }
 
-visable {
-  display: block; }
+.menuContent {
+  position: absolute;
+  left: 20px;
+  width: 100px;
+  background-color: white;
+  opacity: 50%; }
+  .menuContent a {
+    color: black;
+    margin: 10px 5px;
+    padding: 10px 0;
+    text-decoration: none;
+    display: block; }
+  .menuContent a:hover {
+    font-size: 1.1rem;
+    color: blue; }
+
+#menuCall {
+  display: none; }
 
 Content {
   padding: 6% 10%;
@@ -45,7 +62,11 @@ Content {
   width: 95%;
   margin: 10px; }
   .pageLink a, .pageLink a:hover, .pageLink a:focus, .pageLink a:active {
-    text-decoration: none; }
+    text-decoration: none;
+    width: 300px; }
+
+.pageLink:hover {
+  box-shadow: 0 0 5px 5px #070300; }
 
 footer {
   color: white;
