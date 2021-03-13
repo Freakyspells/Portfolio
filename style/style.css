@@ -1,39 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 * {
   margin: 0;
   text-align: center; }
+
+a, a:hover, a:focus, a:active {
+  color: inherit; }
 
 body {
   background-image: url("florian-olivo.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-  display: grid;
-  grid-template-areas: "title" "menuButton" "pageContent" "footer"; }
+  display: grid; }
+
+#menu {
+  position: relative;
+  text-align: left;
+  justify-content: left;
+  align-items: left;
+  left: 20px;
+  top: -5px; }
 
 #menuButton {
-  text-align: left;
-  border: 5px solid red; }
+  width: 100px;
+  opacity: 50%;
+  background: none;
+  color: white; }
 
 #pageTitle {
-  grid-area: title;
-  border: 5px solid yellow; }
+  font-family: "Kaushan Script", cursive;
+  padding: 5px; }
 
-#pageContent {
-  grid-area: pageContent;
-  border: 5px solid pink;
-  padding: 20px 40px 40px 40px;
+Content {
+  padding: 6% 10%;
   text-align: center; }
 
 .pageLink {
-  border: 5px outset green;
+  font-family: "Kaushan Script", cursive;
+  font-size: 2rem;
+  border: 8px groove #382412;
   background: url("nathan-dumlao-wood.jpg");
   background-size: cover;
+  width: 95%;
+  postion: relative;
   margin: 10px; }
+  .pageLink a, .pageLink a:hover, .pageLink a:focus, .pageLink a:active {
+    text-decoration: none; }
 
-#footer {
-  grid-area: footer;
+footer {
   text-align: center;
-  border: 5px solid blue;
-  font-size: 0.7rem; }
+  border-top: 5px;
+  postion: relative;
+  color: white;
+  background: black;
+  opacity: 50%;
+  font-size: 0.5rem;
+  font-family: "times new roman"; }
 
 /*# sourceMappingURL=style.css.map */

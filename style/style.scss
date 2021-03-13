@@ -1,54 +1,91 @@
+// Kaushan Script -google fonts
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+$primaryFont:'Kaushan Script', cursive;
+$secondaryFont: 'times new roman';
+
 *{
     margin:0;
     text-align: center;
 }
 
+a, a:hover, a:focus, a:active {
+    color: inherit; }
+
 body{
+
     //background picture
     background-image: url("florian-olivo.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
 
+    
     //grid settings
     display:grid;
-    grid-template-areas: "title" "menuButton" "pageContent" "footer";
-
+    // grid-template-areas: "test";//"title" "menuButton" "pageContent" "foooter";
+    
     // grid-template-columns: 0% 100%;
     // grid-template-areas: "title title" "pageContent pageContent" "footer footer";
 }
 
-#menuButton{ //menu
-//    grid-area: menuButton;
+#menu{ //menu
+    //    grid-area: menuButton;
+    position: relative;
     text-align: left;
-    // left: 20px;
-    border: 5px solid red;
-    // padding: 10px;
+    justify-content: left;
+    align-items: left;
+    left: 20px;
+    top: -5px;
+    
+}
+#menuButton{
+    width: 100px;
+    opacity: 50%;
+    background: none;
+    color: white;
 }
 
 #pageTitle{ //header
-    grid-area: title;
-    border: 5px solid yellow;
-    // padding:5px;
+    font-family: $primaryFont;
+    // grid-area: title;
+    padding:5px;
 }
 
-#pageContent{ //content box
-    grid-area: pageContent;
-    border: 5px solid pink;
-    padding: 20px 40px 40px 40px ;
+Content{ //content box
+    // grid-area: pageContent;
+    padding: 6% 10%;
     text-align: center;
 }
 .pageLink{
-    border: 5px outset green;
+    font-family: $primaryFont; 
+    font-size: 2rem;
+    // border-radius: 30px;
+
+    border: 8px groove #382412;
     background: url('nathan-dumlao-wood.jpg');
     background-size: cover;
+    width: 95%;
+    postion:relative;
+    // left:100px;
     margin: 10px;
+    a, a:hover, a:focus, a:active {
+        text-decoration: none;
+    }
 }
 
-#footer{
-    grid-area: footer;
+footer{
+    // grid-area: footer;
     text-align: center;
-    border: 5px solid blue;
-    font-size: 0.7rem;
+    border-top: 5px;
+    postion: relative;
+    color:white;
+
+    background: black;
+    opacity: 50%;
+
+    font-size: 0.5rem;
+    font-family: $secondaryFont;
+    
 }
 
