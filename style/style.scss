@@ -4,6 +4,7 @@
 $primaryFont:'Kaushan Script', cursive;
 $secondaryFont: 'times new roman';
 
+//---------------------------Layout & Background-----------------
 *{
     margin:0;
     text-align: center;
@@ -24,20 +25,28 @@ body{
     //grid settings
     display:grid;
     // grid-template-areas: "test";//"title" "menuButton" "pageContent" "foooter";
-    
     // grid-template-columns: 0% 100%;
     // grid-template-areas: "title title" "pageContent pageContent" "footer footer";
 }
+//-------------------------Header----------------------------
+#pageTitle{
+    font-family: $primaryFont;
+    // grid-area: title;
+    padding:5px;
+}
 
-#menu{ //menu
+//------------------------Navigation (menu)-------------------
+// nav{ 
+//     position: relative; 
+//     display:inline-block;
+// }
+
+#menuLine{ //menu
     //    grid-area: menuButton;
     position: relative;
     text-align: left;
-    justify-content: left;
-    align-items: left;
     left: 20px;
     top: -5px;
-    
 }
 #menuButton{
     width: 100px;
@@ -46,18 +55,17 @@ body{
     color: white;
 }
 
-#pageTitle{ //header
-    font-family: $primaryFont;
-    // grid-area: title;
-    padding:5px;
+visable{
+    display:block;
 }
 
+//---------------------------Content items-----------------------
 Content{ //content box
     // grid-area: pageContent;
     padding: 6% 10%;
     text-align: center;
 }
-.pageLink{
+.pageLink{ //content items
     font-family: $primaryFont; 
     font-size: 2rem;
     // border-radius: 30px;
@@ -66,26 +74,19 @@ Content{ //content box
     background: url('nathan-dumlao-wood.jpg');
     background-size: cover;
     width: 95%;
-    postion:relative;
-    // left:100px;
     margin: 10px;
     a, a:hover, a:focus, a:active {
         text-decoration: none;
     }
 }
 
+//--------------------------Footer-------------------------------
 footer{
     // grid-area: footer;
-    text-align: center;
-    border-top: 5px;
-    postion: relative;
     color:white;
-
     background: black;
     opacity: 50%;
-
     font-size: 0.5rem;
     font-family: $secondaryFont;
-    
 }
 

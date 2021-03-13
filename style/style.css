@@ -13,11 +13,13 @@ body {
   background-size: 100% 100%;
   display: grid; }
 
-#menu {
+#pageTitle {
+  font-family: "Kaushan Script", cursive;
+  padding: 5px; }
+
+#menuLine {
   position: relative;
   text-align: left;
-  justify-content: left;
-  align-items: left;
   left: 20px;
   top: -5px; }
 
@@ -27,9 +29,8 @@ body {
   background: none;
   color: white; }
 
-#pageTitle {
-  font-family: "Kaushan Script", cursive;
-  padding: 5px; }
+visable {
+  display: block; }
 
 Content {
   padding: 6% 10%;
@@ -42,15 +43,11 @@ Content {
   background: url("nathan-dumlao-wood.jpg");
   background-size: cover;
   width: 95%;
-  postion: relative;
   margin: 10px; }
   .pageLink a, .pageLink a:hover, .pageLink a:focus, .pageLink a:active {
     text-decoration: none; }
 
 footer {
-  text-align: center;
-  border-top: 5px;
-  postion: relative;
   color: white;
   background: black;
   opacity: 50%;
