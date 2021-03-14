@@ -114,8 +114,8 @@ nav {
   border: 5px solid black; }
 
 #interestsContent {
-  margin: 3vh 5vw 0 5vw;
-  min-height: 70vh;
+  margin: 3vh 5vw;
+  min-height: 60vh;
   display: inline-flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -123,7 +123,11 @@ nav {
 
 .interests {
   width: auto;
-  display: block; }
+  display: block;
+  margin: 5vmin 0; }
+  .interests div {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px; }
   .interests img {
     width: 200px; }
 
@@ -144,6 +148,21 @@ footer {
   #socialContent a {
     height: 15vmin;
     margin: 0 15vw; }
+
+  .interests {
+    display: flex;
+    width: 90vw;
+    justify-content: space-around;
+    align-items: center; }
+    .interests div {
+      display: inline-block;
+      width: 60vw; }
+    .interests img {
+      width: 25vw;
+      height: auto; }
+
+  #interestCap2 {
+    order: -1; }
 
   /* desktop */ }
 @media only screen and (min-width: 401px) and (min-width: 961px) {
