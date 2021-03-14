@@ -1,7 +1,7 @@
-// Kaushan Script -google fonts
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+// Raleway font - light 300 - google fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
-$primaryFont:'Kaushan Script', cursive;
+$primaryFont:'Raleway', sans-serif;
 $secondaryFont: 'times new roman';
 
 //---------------------------Layout & Background-----------------
@@ -21,7 +21,8 @@ body{
     background-attachment: fixed;
     background-size: 100% 100%;
 
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
+    text-shadow: 3px 3px 3px black ;
     
     //grid settings
     display:grid;
@@ -47,8 +48,8 @@ nav{
     position: relative;
     text-align: left;
     left: 20px;
-    // top: -5px;
 }
+
 #menuButton{
     width: 30%;
     font-size: 4vmin;
@@ -72,6 +73,7 @@ nav{
         margin: 10px 5px;
         padding: 10px 0;
         text-decoration: none;
+        text-shadow: none;
         display: block;
     }
     a:hover{
@@ -126,7 +128,6 @@ nav{
         display:inline-block;
         margin: 0 20vw;
         height: 10vh;
-        border: 1px white solid;
         border-radius: 60%;
         img { 
             height:inherit; 
@@ -141,6 +142,7 @@ nav{
     height: 20vh;
     margin-bottom: 1vh;    
     width:100%;
+    font-size: 6vmin;
 }
 .profilePic{
     height:inherit; 
@@ -162,12 +164,22 @@ nav{
     width: auto;
     display:block;
     margin: 5vmin 0;
+    font-family: $primaryFont;
     div{
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.8);
         border-radius: 10px;
     }
     img{
         width: 200px;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+    h2{
+        font-size: 4.5vmin;
+    }
+    p{
+        font-size: 2.5vmin;
+        padding: 2vmin;
     }
 }
 
@@ -186,7 +198,7 @@ footer{
 
 
 // -------------------tablet and desktop views--------------------
-/* tablet */
+/* tablet+ */
 @media only screen and (min-width: 401px) 
 // and (max-width: 960px)
 {
@@ -199,18 +211,19 @@ footer{
             margin:0 15vw;
         }
     }
-
+//---- about 
+    #interestsContent{
+        flex-wrap: wrap;
+    }
     .interests {
         display:flex;
         width: 90vw;
         justify-content: space-around;
         align-items: center;
+        align-self: flex-start;
         div{
             display: inline-block;
             width: 60vw;
-            h2{
-                // width: 50%;
-            }
         }
         img{
             width: 25vw;
@@ -233,6 +246,27 @@ footer{
         .profile{
             order:0;
             margin: 0;
+        }
+        //--about desktop
+        #interestsContent{
+            display: flex;
+            flex-direction:row;
+            min-height: auto;
+            // padding: 0 0 40vmin 0;
+        }
+        .interests {
+            display:flex;
+            flex-wrap: wrap;
+            width: 25vw;
+            //     justify-content: space-around;
+            //     align-items: center;
+            div{
+                margin-top: 2vh;
+                width: 25vw;
+            }
+        }
+        #interestCap2{
+            order: 0;
         }
     }
   }

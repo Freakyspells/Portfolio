@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 * {
   margin: 0;
   text-align: center; }
@@ -11,7 +11,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 3px 3px 3px black;
   display: grid;
   grid-template-areas: "title" "menu" "content" "footer"; }
 
@@ -19,7 +20,7 @@ header {
   grid-area: title; }
 
 #pageTitle {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Raleway", sans-serif;
   font-size: 10vmin;
   padding: 5px; }
 
@@ -53,6 +54,7 @@ nav {
     margin: 10px 5px;
     padding: 10px 0;
     text-decoration: none;
+    text-shadow: none;
     display: block; }
   .menuContent a:hover {
     font-size: 3.3vmin;
@@ -67,7 +69,7 @@ nav {
   min-height: 60vh; }
 
 .pageLink {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Raleway", sans-serif;
   font-size: 6vmin;
   border: 8px groove #382412;
   border-radius: 10px;
@@ -95,7 +97,6 @@ nav {
     display: inline-block;
     margin: 0 20vw;
     height: 10vh;
-    border: 1px white solid;
     border-radius: 60%; }
     #socialContent a img {
       height: inherit; }
@@ -106,7 +107,8 @@ nav {
   order: -1;
   height: 20vh;
   margin-bottom: 1vh;
-  width: 100%; }
+  width: 100%;
+  font-size: 6vmin; }
 
 .profilePic {
   height: inherit;
@@ -124,12 +126,20 @@ nav {
 .interests {
   width: auto;
   display: block;
-  margin: 5vmin 0; }
+  margin: 5vmin 0;
+  font-family: "Raleway", sans-serif; }
   .interests div {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px; }
   .interests img {
-    width: 200px; }
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid black; }
+  .interests h2 {
+    font-size: 4.5vmin; }
+  .interests p {
+    font-size: 2.5vmin;
+    padding: 2vmin; }
 
 footer {
   bottom: 0px;
@@ -141,7 +151,7 @@ footer {
   font-size: 1.5vmin;
   font-family: "times new roman"; }
 
-/* tablet */
+/* tablet+ */
 @media only screen and (min-width: 401px) {
   #socialContent .profile {
     display: block; }
@@ -149,11 +159,15 @@ footer {
     height: 15vmin;
     margin: 0 15vw; }
 
+  #interestsContent {
+    flex-wrap: wrap; }
+
   .interests {
     display: flex;
     width: 90vw;
     justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    align-self: flex-start; }
     .interests div {
       display: inline-block;
       width: 60vw; }
@@ -174,6 +188,22 @@ footer {
 
   .profile {
     order: 0;
-    margin: 0; } }
+    margin: 0; }
+
+  #interestsContent {
+    display: flex;
+    flex-direction: row;
+    min-height: auto; }
+
+  .interests {
+    display: flex;
+    flex-wrap: wrap;
+    width: 25vw; }
+    .interests div {
+      margin-top: 2vh;
+      width: 25vw; }
+
+  #interestCap2 {
+    order: 0; } }
 
 /*# sourceMappingURL=style.css.map */
