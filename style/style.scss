@@ -21,6 +21,7 @@ body{
     background-attachment: fixed;
     background-size: 100% 100%;
 
+    color: rgba(255, 255, 255, 0.5);
     
     //grid settings
     display:grid;
@@ -146,6 +147,24 @@ nav{
     border-radius: 50%;
     border: 5px solid black;
 }
+//----------interests----------
+#interestsContent{
+    margin: 3vh 5vw 0 5vw;
+    min-height: 70vh;
+    display:inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.interests{
+    width: auto;
+    display:block;
+    img{
+        width: 200px;
+    }
+}
 
 //--------------------------Footer-------------------------------
 footer{
@@ -174,6 +193,10 @@ footer{
             height:15vmin;
             margin:0 15vw;
         }
+    }
+
+    #interestsContent{
+
     }
     
     /* desktop */

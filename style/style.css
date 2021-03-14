@@ -11,6 +11,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+  color: rgba(255, 255, 255, 0.5);
   display: grid;
   grid-template-areas: "title" "menu" "content" "footer"; }
 
@@ -111,6 +112,20 @@ nav {
   height: inherit;
   border-radius: 50%;
   border: 5px solid black; }
+
+#interestsContent {
+  margin: 3vh 5vw 0 5vw;
+  min-height: 70vh;
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.interests {
+  width: auto;
+  display: block; }
+  .interests img {
+    width: 200px; }
 
 footer {
   bottom: 0px;
