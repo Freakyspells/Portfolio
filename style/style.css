@@ -98,9 +98,10 @@ nav {
     border-radius: 60%; }
     #socialContent a img {
       height: inherit; }
+  #socialContent .profile {
+    display: none; }
 
 .profile {
-  display: none;
   order: -1;
   height: 20vh;
   margin-bottom: 1vh;
@@ -123,9 +124,8 @@ footer {
 
 /* tablet */
 @media only screen and (min-width: 401px) {
-  .profile {
+  #socialContent .profile {
     display: block; }
-
   #socialContent a {
     height: 15vmin;
     margin: 0 15vw; }
