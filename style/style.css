@@ -58,8 +58,9 @@ nav {
     color: blue; }
 
 #mainContent {
-  padding: 6% 10%;
-  height: 100%;
+  padding: 3% 10%;
+  min-height: 40vh;
+  max-height: 80vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -69,11 +70,12 @@ nav {
   font-family: "Kaushan Script", cursive;
   font-size: 5vw;
   border: 8px groove #382412;
+  border-radius: 10px;
   background: url("../resources/nathan-dumlao-wood.jpg");
   background-attachment: fixed;
   background-size: 100% 100%;
-  min-width: 90%;
-  margin: 10px; }
+  min-width: 80%;
+  margin: 1% 5%; }
   .pageLink a, .pageLink a:hover, .pageLink a:focus, .pageLink a:active {
     display: block;
     text-decoration: none; }
@@ -95,6 +97,6 @@ footer {
 /* desktop */
 @media only screen and (min-width: 961px) {
   .pageLink {
-    min-width: 45%; } }
+    min-width: 40%; } }
 
 /*# sourceMappingURL=style.css.map */
