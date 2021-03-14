@@ -19,33 +19,38 @@ body{
     background-image: url("florian-olivo.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
 
     
     //grid settings
     display:grid;
-    // grid-template-areas: "test";//"title" "menuButton" "pageContent" "foooter";
-    // grid-template-columns: 0% 100%;
-    // grid-template-areas: "title title" "pageContent pageContent" "footer footer";
+    grid-template-areas: "title" "menu" "content" "footer";
 }
+
 //-------------------------Header----------------------------
+header{
+    grid-area: title;
+}
 #pageTitle{
     font-family: $primaryFont;
-    // grid-area: title;
+    font-size: 10vw;
     padding:5px;
 }
 
 //------------------------Navigation (menu)-------------------
+nav{
+    grid-area: menu;
+}
 
 #menuLine{ //menu
-    //    grid-area: menuButton;
     position: relative;
     text-align: left;
     left: 20px;
     // top: -5px;
 }
 #menuButton{
-    width: 100px;
+    width: 25%;
+    font-size: 4vw;
     background-color: black;
     opacity: 50%;
     color: white;
@@ -57,10 +62,11 @@ body{
     display: none;
     position: absolute;
     left: 20px;
-    width:100px;
+    width:25%;
     background-color: white;
     opacity: 50%;
     a {
+        font-size: 4vw;
         color: black;
         margin: 10px 5px;
         padding: 10px 0;
@@ -74,22 +80,25 @@ body{
 }
 
 //---------------------------Content items-----------------------
-Content{ //content box
-    // grid-area: pageContent;
+content{
+    grid-area: content;
+}
+#mainContent{ //content box
     padding: 6% 10%;
     text-align: center;
 }
 .pageLink{ //content items
     font-family: $primaryFont; 
-    font-size: 2rem;
+    font-size: 8vw;
     border: 8px groove #382412;
     background: url('nathan-dumlao-wood.jpg');
-    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100% 100%;
     width: 95%;
     margin: 10px;
     a, a:hover, a:focus, a:active {
+        display: block;
         text-decoration: none;
-        width: 300px;
     }
 }
 .pageLink:hover{
@@ -98,7 +107,10 @@ Content{ //content box
 
 //--------------------------Footer-------------------------------
 footer{
-    // grid-area: footer;
+    grid-area: footer;
+    bottom:0px;
+    position:fixed;
+    width:100%;
     color:white;
     background: black;
     opacity: 50%;
@@ -106,3 +118,14 @@ footer{
     font-family: $secondaryFont;
 }
 
+
+// -------------------tablet and desktop views--------------------
+/* tablet */
+@media only screen and (min-width: 401px) and (max-width: 960px){
+
+  }
+  
+  /* desktop */
+  @media only screen and (min-width: 961px){
+
+  }
