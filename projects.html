@@ -25,26 +25,24 @@
         </div>
     </nav>
 
-    <article>
-        <div id="projectContent">
-            
-                <img id="figure1" src="resources/arduino_board.jpg" alt="arduino board">
-                <section id="projectOne">
-                    <h2>Project #1:<br>Programing a microprocessor to control an LED matrix</h2>
-                    <p>In this project I had to program a microprocessor connected to an LED matrix. I had to setup the microprocessor so it could talk to the display element and get it to display a clock on press and count to 60 with an interrupt routine to reset it. Ensuring I had all the ports set correctly and sending the right code to display how I desired. </p>
-                    <a href="#">Find the project on git here.</a>
-                </section>
-            
-            
-                <img id="figure2" src="resources/portfolio.jpg" alt="">
-                <section id="projectTwo">
-                    <h2>Project #2:<br>Building and launching and online portfolio</h2>
-                    <p>Here I had to build and design an online portfilo. This is in fact the portfolio in question.</p>
-                    <a href="#">Find the project on git here.</a>
-                </section>
-            
-        </div>
-    </article>
+    <main id="projectContent">
+        <article>
+            <img id="figure1" src="resources/arduino_board.jpg" alt="arduino board">
+            <div>
+                <h2>Project #1:<br>Programing a microprocessor to control an LED matrix</h2>
+                <p>In this project I had to program a microprocessor connected to an LED matrix. I had to setup the microprocessor so it could talk to the display element and get it to display a clock on press and count to 60 with an interrupt routine to reset it. Ensuring I had all the ports set correctly and sending the right code to display how I desired. </p>
+            </div>
+        </article>
+    
+        <article>
+            <img id="figure2" src="resources/portfolio.jpg" alt="">
+            <div id="projectTwo">
+                <h2>Project #2:<br>Building and launching and online portfolio</h2>
+                <p>Here I had to build and design an online portfilo. This is in fact the portfolio in question.</p>
+                <a href="#">Find the project on git here.</a>
+            </div>
+        </article>
+    </main>
     
     <footer id="footer">
         <p>Copyright, 2021, Christopher Beasley
@@ -57,7 +55,8 @@
     <script>
         function menuFunction() {
             var x = document.getElementById("menuCall");
-            if (x.style.display === "none") {
+            let style = window.getComputedStyle(x).display
+            if (style == "none") {
                 x.style.display = "block";
             } else {
                 x.style.display = "none";

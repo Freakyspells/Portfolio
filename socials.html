@@ -58,7 +58,8 @@
     <script>
         function menuFunction() {
             var x = document.getElementById("menuCall");
-            if (x.style.display === "none") {
+            let style = window.getComputedStyle(x).display
+            if (style == "none") {
                 x.style.display = "block";
             } else {
                 x.style.display = "none";
