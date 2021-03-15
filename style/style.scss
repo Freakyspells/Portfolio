@@ -175,12 +175,66 @@ nav{
         border: 1px solid black;
     }
     h2{
-        font-size: 4.5vmin;
+        font-size: 5vmin;
+    }
+    p{
+        font-size: 4vmin;
+        padding: 2vmin;
+    }
+}
+
+//-------project content---------
+#projectContent{
+    display:grid;
+    gap: 2vmin;
+    margin: 2vmin;
+    text-shadow: 2px 2px 2px black;
+    section{
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: 2vh 0;
+    }
+    h2{
+        font-size: 3vmin;
     }
     p{
         font-size: 2.5vmin;
-        padding: 2vmin;
+        padding: 1vmin;
     }
+    a{
+        font-size: 2vmin;
+    }
+    img{
+        display: none;
+        height: 30vmin;
+        align-self: center;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+}
+#skillsContent{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2vmin;
+    margin: 2vmin;
+    text-shadow: 2px 2px 2px black;
+    section{
+        min-width: 70vw;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        margin: 2vh auto;
+    }
+    // h2{
+    //     font-size: 3vmin;
+    // }
+    // p{
+    //     font-size: 2.5vmin;
+    //     padding: 1vmin;
+    // }
+    // a{
+    //     font-size: 2vmin;
+    // }
 }
 
 //--------------------------Footer-------------------------------
@@ -192,16 +246,15 @@ footer{
     color:white;
     background: black;
     opacity: 50%;
-    font-size: 1.5vmin;
+    font-size: 3vmin;
     font-family: $secondaryFont;
 }
 
-
 // -------------------tablet and desktop views--------------------
 /* tablet+ */
-@media only screen and (min-width: 401px) 
+@media only screen and (min-width: 401px) {
 // and (max-width: 960px)
-{
+//--------socials
     #socialContent {
         .profile{
             display: block;
@@ -213,7 +266,7 @@ footer{
     }
 //---- about 
     #interestsContent{
-        flex-wrap: wrap;
+        flex-wrap:nowrap;
     }
     .interests {
         display:flex;
@@ -234,8 +287,41 @@ footer{
         order: -1;
     }
     
-    /* desktop */
+    //-----projects-----
+    #projectContent{
+        grid-template-areas: "One Two" "Three Four";
+        img{
+            display:block;
+            justify-self: center;
+        }
+
+    }
+    
+    #projectOne{
+        grid-area: One;
+    }
+        
+    #projectTwo{
+        grid-area: Three;
+    }
+        
+    #figure1{
+        grid-area: Two;
+    }
+        
+    #figure2{
+        grid-area: Four;
+    }
+    //---skills (tablet and desktop)
+    #skillsContent{
+        flex-wrap: nowrap;
+        section{
+            min-width: 25vw;
+        }
+    }
+    /* desktop view */
     @media only screen and (min-width: 961px){
+        //------socials-----
         #socialContent{
             margin-top: 15px;
         }
@@ -247,7 +333,7 @@ footer{
             order:0;
             margin: 0;
         }
-        //--about desktop
+        //-------about me----
         #interestsContent{
             display: flex;
             flex-direction:row;
@@ -267,6 +353,10 @@ footer{
         }
         #interestCap2{
             order: 0;
+        }
+        //----projects----
+        #projectContent{
+            grid-template-areas: "Two Four" "One Three";
         }
     }
   }
